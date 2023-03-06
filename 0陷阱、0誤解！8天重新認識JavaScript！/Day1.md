@@ -22,7 +22,6 @@ JavaScript變數與資料型別
 *   JavaScript沒有char的概念，只有字串的概念。
 *   字串使用雙引號和單引號包夾住，兩者不可混用，意思就是用單引號開頭就必須要用單引號結尾，JavaScript中單引號和雙引號作用也相同。例如：`'Hello'`、`"World"`。
 *   ES6開始後又新增一種特殊字串樣板字面值(template literal)，這種新特性在字串使用上提供了很大的靈活性，例如可以支援多行字串，允許變數直接嵌入字串，甚至可以嵌入運算式。例如：
-javascript
 
 ```javascript
 const name = "Alice";
@@ -38,8 +37,6 @@ console.log(`My name is ${name}, and I'm ${age} years old.`);
 *   JavaScript是基於IEEE754二進位浮點數算數標準，所以在使用`0.1+0.2===0.3`時會返回`false`，因為十進位的小數無法完美的用二進位的方式表示，所以會存在精度問題。
 *   如果要比較浮點數，可以利用ES6提供的最小精度值(Number.EPSILON)來進行比較。例如：
 
-javascript
-
 ```javascript
 const a = 0.1;
 const b = 0.2;
@@ -52,8 +49,6 @@ if (Math.abs((a + b) - c) < Number.EPSILON) {
 *   undefined代表的是變數還沒有給值，所以不知道是什麼。例如：`let x;`，此時變數`x`的值就是`undefined`。
 *   null代表的是變數可能曾經有值，可能沒有值，現在也沒有值。例如：`let x = null;`。
 *   在非全域作用範圍下，undefined允許被當作變數名稱使用，而且這個變數的值是『可以』被更改的，甚至做為參數使用也是可以的。例如：
-
-javascript
 
 ```javascript
 function test(undefined) {
